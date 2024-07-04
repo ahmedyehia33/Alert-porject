@@ -1,0 +1,48 @@
+$borderColor: rgba(255, 25, 0 , 0.332);
+$errorBg: rgb(192 29 29 / 15%);
+$errorColor: white;
+
+@mixin alert ($name , $borderColor , $bgColor , $color){
+    .#{$name} {
+        border: 2px dotted $borderColor;
+        padding: 1rem;
+        border-radius: 0.8rem;
+        width:45%;
+        margin: 1rem auto;
+        background-color: $bgColor;
+        color: $color;
+    
+      .alert-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .alert-title{
+            display: flex;
+            align-items: center;
+            
+        }
+        .alert-header h4{
+            margin-left: 0.5rem;
+            font-size: 1.4rem;
+        }
+    
+       p{
+        margin-top: 1.3rem;
+       }
+      
+    }
+}
+.alert-hidden{
+    display: none;
+   }
+@include alert('alert-upgrade',#c5c5c5,#161616 ,#161616 ) ;
+@include alert('alert-note' , #686987, #090813, #b0b2f0);
+@include alert('alert-error' , #390f0f , #1d0403 , #c57a7e);
+@include alert('alert-order' ,#32472f, #1e1e02, #71ab5d );
+
+
+
+
+
+
