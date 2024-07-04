@@ -14,7 +14,7 @@ interface IProps {
 
 const Alert= ({type , icon , title , description} : IProps ) => {
   const [display , setDisplay] = useState(true);
-  const handleDipslay = ()=>{
+  const handleDisplay = ()=>{
     setDisplay(!display);
   }
   return ( <>
@@ -26,7 +26,7 @@ const Alert= ({type , icon , title , description} : IProps ) => {
         {title}
       </h4>
       </div>
-      <span onClick={handleDipslay}><X size={25}/> </span>
+      <span onClick={handleDisplay}><X size={25}/> </span>
     </div>
       <p>{description}</p>
       
